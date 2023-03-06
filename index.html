@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number-Guessing-Game~KingPrince</title>
+    <link rel="stylesheet" href="number_guessing2.css">
+    <script src="number_guessing2.js" defer></script>    
+</head>
+<body id="body">
+    <header>
+        <h1 class="game-tittle">Guess a number between 1 and 400.</h1>
+    </header>
+    <div class="new_game-and-input_area"> <button class="game-btn game-btn_new">New Game</button>
+        <h2 id="random-number-generated"></h2>
+        <marquee class="game-marquee" behavior="" direction="">
+            <p class="game_instructions">Game Instructions. => Press New Game, => Enter Your UserName! => Enter Any Number Between 1 and 400 And Press Guess or Enter, => Continue Until it matches The System Randomly Generated Number. => Once You've Got That Random Number Right  => You're Ready  To Start A New Game Again =>  Good Luck!!! Playing [ (.)~(.) ]</p>
+        </marquee>
+        <input type="number" name="" id="input-area" class="iput-area">
+        <h2 class="play-state">Player:  <span id="userName">' UserName '</span></h2>
+        <h2 class="play-state play-state2"></h2>
+        <button class="game-btn game-btn_guess">Guess</button>
+    </div>
+   <div class="media-audio">
+    <audio src="./media/audio/correct-answer.mp3" id="correct-answer"></audio>
+    <audio src="./media/audio/wrong-answer-high.mp3" id="wrong-answer-high"></audio>
+    <audio src="./media/audio/wrong-answer-low.mp3" id="wrong-answer-low"></audio>
+   </div>
+</body>
+</html>

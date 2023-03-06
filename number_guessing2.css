@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
+   
+}
+
+.game-tittle {
+    margin-top: 0;
+    height: 60px;
+    font-size: 33px;
+    font-family:cursive;
+    color: whitesmoke;
+    text-transform: uppercase;
+    /* border: 2px solid black; */
+    text-shadow:2px 4px 4px purple ;
+    box-shadow: 2px 4px 4px black;
+    background-color: rgb(0, 100, 0);
+    text-align: center;
+    padding-top: 17px;
+}
+
+#random-number-generated{
+    color: whitesmoke;
+    margin-bottom: 10px;
+    font-family: cursive;
+    letter-spacing: 0.5px;
+    animation-name:randomNumberGeneratedAnimation ;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes randomNumberGeneratedAnimation {
+    0%{
+        letter-spacing: 0.5px;
+    }
+    50%{
+        letter-spacing:-7px ;
+    }
+    100%{
+        letter-spacing: 1px;
+    }
+}
+
+.game-marquee {
+    /* margin: 20px 50px; */
+    margin: 0px 50px 0 50px;
+  }
+.game_instructions{
+    color: white;
+  }
+
+.new_game-and-input_area {
+    margin-top: 0px;
+    height: 80vh;
+    width: 60vw;
+    margin-left: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 6px 15px 15px green;
+    background-image: linear-gradient(to right, purple , black , blueviolet);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.new_game-and-input_area::after{
+content: "";
+position: absolute;
+background-color: black;
+height: 3px;
+width: 50px;
+border-radius: 30px;
+top: 15px;
+right: 16px;
+/* left: 12px; */
+animation-name: newGameAndInputAreaAfterElement;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes newGameAndInputAreaAfterElement {
+    0%{
+      right: 10%;
+      background-color: greenyellow;
+      
+    }
+    10%{
+        right: 30%;
+    }
+    20%{
+        right: 20%;
+    }
+    30%{
+        right: 40%;
+    }
+    40%{
+        right: 60%;
+    }
+    50%{
+        right: 50%;
+        background-color: white;
+        width: 150px;
+    }
+    60%{
+        right: 70%;
+    }
+    70%{
+        right: 90%;
+    }
+    80%{
+        right: 80%;
+    }
+    90%{
+        right: 85%;
+    }
+    100%{
+        right: 90%;
+        width: 20px;
+        background-color: yellow;
+    }
+   
+  }
+
+  .new_game-and-input_area::before {
+content: "";
+position: absolute;
+background-color: whitesmoke;
+height: 3px;
+border-radius: 30px;
+bottom: 20px;
+right: 10px;
+left: 10px;
+transform: scaleX(0);
+transform-origin: left;
+animation-name: newGameAndInputAreaBeforeElement;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+ }
+
+ @keyframes newGameAndInputAreaBeforeElement {
+0%{
+    transform: scaleX(1);
+   
+}
+100%{
+    transform-origin: right;
+}
+ 
+ }
+
+.game-btn {
+    outline: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: blue;
+    color: whitesmoke;
+    transition: all 100ms ease-in-out;
+}
+.game-btn:hover, .game-btn:focus {
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: blue;
+
+}
+
+.game-btn_new {
+    margin-top: -40px;
+    /* margin-bottom: 80px; */
+}
+
+.iput-area {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    box-sizing: content-box;
+    box-shadow: 4px 14px 14px black;
+}
+
+.iput-area:hover, .iput-area:focus {
+    background-color: cyan;
+    box-sizing: content-box;
+    box-shadow: 4px 25px 30px black
+}
+.play-state {
+    text-transform: capitalize;
+    color: white;
+    /* margin-bottom: 20px; */
+}
+
+#userName {
+    font-family: cursive;
+    text-transform: capitalize;
+}
+.play-state2{
+    letter-spacing: 0.5px;
+    animation-name: playState2Animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes playState2Animation {
+    0%{
+        letter-spacing: 0.5px;  
+    }
+    50%{
+        letter-spacing: 15px;
+    }
+    100%{
+        letter-spacing: 0.5px;
+    }
+}
